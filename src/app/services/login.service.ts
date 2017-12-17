@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
+import { Http, Headers} from '@angular/http';
+import { Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class LoginService {
@@ -15,7 +15,6 @@ export class LoginService {
   		'Content-Type' : 'application/x-www-form-urlencoded',
   		'AUthorization' : basicHeader
   	});
-
   	return this.http.get( url, { headers: headers });
   }
 
