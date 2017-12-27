@@ -13,13 +13,13 @@ export class LoginComponent implements OnInit {
 
   	constructor( private loginService:LoginService ) { }
 
-  	onSubmit () {
+  	onSubmit() {
   		this.loginService.sendCredential( this.credential.username, this.credential.password ).subscribe(
   			res => {
   				console.log( res );
   				localStorage.setItem( "xAuthToken", res.json().token );
   				this.loggedIn = true;
-          location.reload();
+          //location.reload();
   			},
 
 			error => {

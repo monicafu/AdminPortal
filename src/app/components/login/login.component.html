@@ -3,7 +3,7 @@
 		<mat-grid-list cols = "6" [style.margin-top] ="'20px'">
 			<mat-grid-tile [colspan]= "1"> </mat-grid-tile>
 			<mat-grid-tile [colspan]= "4"> 
-				<form (ngSumbit) = "onSubmit()">
+				<form (ngSubmit)="onSubmit()">
 					<mat-form-field class ="full-width">
 						<input type="text" matInput [(ngModel)] = "credential.username" 
 						name="username" id='username' 
@@ -18,8 +18,9 @@
 					</button>
 				</form>
 			</mat-grid-tile>
-
 		</mat-grid-list>
-		
+	</div>
+	<div [hidden] ="!loggedIn">
+		<h2>You have logged in !</h2>
 	</div>
 </div>

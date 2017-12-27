@@ -28,7 +28,7 @@ import { LoginService } from './services/login.service';
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule，
+    BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule,
     MatToolbarModule,
