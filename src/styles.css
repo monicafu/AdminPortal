@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
 .box {
 	border: 1px solid black;
 }
@@ -17,15 +19,15 @@ body {
     margin:0;
 }
 
-md-input-container {
+mat-input-container {
     width: 100%;
 }
 
-md-select {
+mat-select {
     width: 100%;
 }
 
-md-slide-toggle {
+mat-slide-toggle {
     width:100%;
 }
 
