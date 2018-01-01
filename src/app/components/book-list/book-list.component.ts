@@ -32,7 +32,7 @@ export class BookListComponent implements OnInit {
   }
 
   openDialog(book:Book) {
-    let dialogRef = this.dialog.open(DialogResultExampleDialog);
+    let dialogRef = this.dialog.open(DialogResultDialog);
     dialogRef.afterClosed().subscribe(
       result => {
         console.log(result);
@@ -70,7 +70,7 @@ export class BookListComponent implements OnInit {
   }
 
   removeSelectedBooks() {
-    let dialogRef = this.dialog.open(DialogResultExampleDialog);
+    let dialogRef = this.dialog.open(DialogResultDialog);
     dialogRef.afterClosed().subscribe(
       result => {
         console.log(result);
@@ -109,9 +109,9 @@ export class BookListComponent implements OnInit {
 }
 
 @Component({
-  selector: 'dialog-result-example-dialog',
-  templateUrl: './dialog-result-example-dialog.html'
+  selector: 'dialog-result-dialog',
+  templateUrl: './dialog-result-dialog.html'
 })
-export class DialogResultExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogResultExampleDialog>) {}
+export class DialogResultDialog {
+  constructor(public dialogRef: MatDialogRef<DialogResultDialog>) {}
 }

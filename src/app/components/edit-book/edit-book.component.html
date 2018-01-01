@@ -3,7 +3,7 @@
 		<h3 style="margin-top: 30px;">Update Book Information <span style="font-size:small">* is a required field</span></h3>
 
 		<form (ngSubmit)="onSubmit()">
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="4" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="title" type="text" required [(ngModel)]="book.title" name="title" placeholder="Title">
@@ -11,7 +11,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 			
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="author" type="text" required [(ngModel)]="book.author" name="author" placeholder="Author">
@@ -24,7 +24,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="4" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="publicationDate" type="date" required [(ngModel)]="book.publicationDate" name="publicationDate" placeholder="PublicationDate">
@@ -32,7 +32,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-select placeholder="Category" id="category" name="category" [(ngModel)]="book.category">
 						<mat-option value="Management">Management</mat-option>
@@ -50,7 +50,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="pageNumber" type="number" [(ngModel)]="book.numberOfPages" name="numberOfPages" step="1" placeholder="Number of Pages">
@@ -63,7 +63,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="listPrice" type="number" [(ngModel)]="book.listPrice" name="listPrice" step="0.01" placeholder="List Price">
@@ -76,7 +76,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="shippingWeight" type="number" [(ngModel)]="book.shippingWeight" name="shippingWeight" step="0.01" placeholder="Shipping Weight">
@@ -90,7 +90,7 @@
 				</mat-grid-tile>
 			</mat-grid-list>
 
-			<mat-grid-list cols="4" rowHeight="60px">
+			<mat-grid-list cols="4" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 					<mat-input-container>
 						<input matInput id="inStockNumber" type="number" [(ngModel)]="book.inStockNumber" name="inStockNumber" step="0.01" placeholder="Numbers In Stock">
@@ -109,7 +109,7 @@
 			<input id="tile" type="file" id="bookImage" name="bookImage" (change)="uploadImageService.fileChangeEvent($event)">
 			<br><br>
 
-			<mat-grid-list cols="20" rowHeight="60px">
+			<mat-grid-list cols="20" rowHeight="100px">
 				<mat-grid-tile [colspan]="2" [rowspan]="1">
 						<button class="mat-primary" mat-raised-button type="submit">Update Book</button>
 				</mat-grid-tile>

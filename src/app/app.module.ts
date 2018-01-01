@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing} from './app.routing';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,7 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatListModule} from '@angular/material/list';
 
 import 'hammerjs';
 
@@ -29,7 +30,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
-import { BookListComponent, DialogResultExampleDialog } from './components/book-list/book-list.component';
+import { BookListComponent, DialogResultDialog } from './components/book-list/book-list.component';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 
@@ -41,7 +42,7 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
     LoginComponent,
     AddNewBookComponent,
     BookListComponent,
-    DialogResultExampleDialog,
+    DialogResultDialog,
     ViewBookComponent,
     EditBookComponent
   ],
@@ -55,10 +56,12 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
     MatGridListModule,
     MatInputModule,
     HttpModule,
+    HttpClientModule,
     routing,
     MatSelectModule,
     MatSlideToggleModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule
   ],
   providers: [
   	LoginService,
@@ -69,6 +72,6 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
     EditBookService,
     RemoveBookService
   ],
-  bootstrap: [AppComponent,DialogResultExampleDialog]
+  bootstrap: [AppComponent,DialogResultDialog]
 })
 export class AppModule { }
