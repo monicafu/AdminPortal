@@ -5,7 +5,7 @@ import {LoginService} from '../../services/login.service';
 import {GetBookListService} from '../../services/get-book-list.service';
 import {RemoveBookService} from '../../services/remove-book.service';
 
-import {MatDialog, MatDialogRef } from '@angular/material';
+import {MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-book-list',
@@ -32,7 +32,7 @@ export class BookListComponent implements OnInit {
   }
 
   openDialog(book:Book) {
-    let dialogRef = this.dialog.open(DialogResultDialog);
+    let dialogRef = this.dialog.open(DialogResultExampleDialog);
     dialogRef.afterClosed().subscribe(
       result => {
         console.log(result);
@@ -70,7 +70,7 @@ export class BookListComponent implements OnInit {
   }
 
   removeSelectedBooks() {
-    let dialogRef = this.dialog.open(DialogResultDialog);
+    let dialogRef = this.dialog.open(DialogResultExampleDialog);
     dialogRef.afterClosed().subscribe(
       result => {
         console.log(result);
@@ -109,9 +109,15 @@ export class BookListComponent implements OnInit {
 }
 
 @Component({
-  selector: 'dialog-result-dialog',
-  templateUrl: './dialog-result-dialog.html'
+  selector: 'dialog-result-example-dialog',
+  templateUrl: './dialog-result-example-dialog.html'
 })
-export class DialogResultDialog {
-  constructor(public dialogRef: MatDialogRef<DialogResultDialog>) {}
+export class DialogResultExampleDialog {
+  constructor(
+    public dialogRef: MatDialogRef<DialogResultExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
+
+   onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
